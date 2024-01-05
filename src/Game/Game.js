@@ -15,8 +15,7 @@ const Game = (props) => {
 
     return (
         <div style={{ margin: 'auto' }}>
-            {!isWinner && <h3>Next turn: {nextTurn ? 'O' : 'X'}</h3>}
-            {isWinner && <h3>Winner: {isWinner}</h3>}
+            {!isWinner ? <h3>Next turn: {nextTurn ? 'O' : 'X'}</h3> : <h3>Winner: {isWinner}</h3>}
             <Board turn={nextTurn} winner={isWinner} winnerHandler={handleSetIsWinner} nextTurnHandler={handleNextTurn} />
         </div>
     )
